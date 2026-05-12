@@ -63,11 +63,12 @@ install_packages() {
     brew install --cask wkhtmltopdf 2>/dev/null || brew install wkhtmltopdf 2>/dev/null || \
         print_err "wkhtmltopdf skipped (install manually if needed for PDF features)"
 
-    print_step "Upgrading pip..."
-    python3 -m pip install --upgrade pip
+    print_step "Creating virtual environment (.venv)..."
+    python3 -m venv .venv
 
-    print_step "Installing Python requirements..."
-    python3 -m pip install -r requirements.txt
+    print_step "Installing Python requirements inside venv..."
+    .venv/bin/pip install --upgrade pip
+    .venv/bin/pip install -r requirements.txt
 
     print_ok "All packages installed successfully!"
 }
@@ -129,4 +130,5 @@ echo -e "\n${GREEN}=============================="
 echo -e "[+] INSTALLATION COMPLETE!"
 echo -e "==============================${RESET}"
 echo -e "${WHITE}Run the tool with:${RESET}"
+echo -e "${GREEN}  source .venv/bin/activate${RESET}"
 echo -e "${GREEN}  python3 MrCodeHacker.py${RESET}\n"
