@@ -28,7 +28,7 @@ from time import sleep
 filename = Language.Translation.Get_Language()
 filename
 
-class MrHolmes:
+class MrCodeHacker:
 
     @staticmethod
     def Scraping(report, username, http_proxy,InstagramParams,PostLocations, PostGpsCoordinates,TwitterParams):
@@ -200,7 +200,7 @@ class MrHolmes:
         Tags = []
         MostTags = []
         Writable = True
-        MrHolmes.Banner(Mode)
+        MrCodeHacker.Banner(Mode)
         print(Font.Color.BLUE + "\n[I]" + Font.Color.WHITE + "INFO:" + "[{}]".format(Font.Color.GREEN + Language.Translation.Translate_Language(filename,"Username","Default","Explanation") + Font.Color.WHITE) )
         subject = "USERNAME"
         found = 0
@@ -246,7 +246,7 @@ class MrHolmes:
         dt_string = now.strftime(dataformat)
         Date = "Date: " + str(dt_string)
         choice = int(input(
-            Font.Color.BLUE + "\n[+]" + Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Default", "choice", "None") + Font.Color.GREEN + "[#MR.HOLMES#]" + Font.Color.WHITE + "-->"))
+            Font.Color.BLUE + "\n[+]" + Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Default", "choice", "None") + Font.Color.GREEN + "[#MR.CODEHACKER#]" + Font.Color.WHITE + "-->"))
         if choice == 1:
             http_proxy = Proxies.proxy.final_proxis
             http_proxy2 = Proxies.proxy.choice3
@@ -279,17 +279,17 @@ class MrHolmes:
         f.write(Language.Translation.Translate_Language(
             filename, "Report", "Username", "Found"))
         f.close()
-        opt = int(input(Font.Color.BLUE + "\n[+]" + Font.Color.GREEN + "[INSERT AN OPTION]:" +  Font.Color.WHITE + "\n(1)USERNAME-RESEARCH (SEARCH USERNAME ON DIFFERENT WEBSITES)\n(2)PROFILE-SCRAPING (SCRAPE USERNAME PROFILE DIRECTLY)" + Font.Color.GREEN + "\n\n[#MR.HOLMES#]" + Font.Color.WHITE + "-->"))
+        opt = int(input(Font.Color.BLUE + "\n[+]" + Font.Color.GREEN + "[INSERT AN OPTION]:" +  Font.Color.WHITE + "\n(1)USERNAME-RESEARCH (SEARCH USERNAME ON DIFFERENT WEBSITES)\n(2)PROFILE-SCRAPING (SCRAPE USERNAME PROFILE DIRECTLY)" + Font.Color.GREEN + "\n\n[#MR.CODEHACKER#]" + Font.Color.WHITE + "-->"))
         if opt == 1:
             i1 = CO.Counter.Site(nomefile)
-            MrHolmes.Controll(username, nomefile, identity, report, subject,
+            MrCodeHacker.Controll(username, nomefile, identity, report, subject,
                             successfull, ScraperSites, Writable, http_proxy2, successfullName, http_proxy, choice, Tags, MostTags)
             Nsfw = int(input(Font.Color.BLUE + "\n[?]" + Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Username", "Default", "Nsfw") +
-                    Font.Color.GREEN + "[#MR.HOLMES#]" + Font.Color.WHITE + "-->"))
+                    Font.Color.GREEN + "[#MR.CODEHACKER#]" + Font.Color.WHITE + "-->"))
             if Nsfw == 1:
                 nomefile = "Site_lists/Username/NSFW_site_list.json"
                 i2 = CO.Counter.Site(nomefile)
-                MrHolmes.Controll(username, nomefile, identity, report, subject,
+                MrCodeHacker.Controll(username, nomefile, identity, report, subject,
                                 successfull, ScraperSites, Writable, http_proxy2, successfullName, http_proxy, choice, Tags, MostTags)
                 Count = i1 + i2
             else:
@@ -310,11 +310,11 @@ class MrHolmes:
                         os.mkdir("Profile_pics")
                     os.chdir("../../../../")
                     choice = int(input(Font.Color.BLUE + "\n[?]" + Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Username", "Default", "Scraper") +
-                                Font.Color.GREEN + "[*MR.HOLMES*]" + Font.Color.WHITE + "-->"))
+                                Font.Color.GREEN + "[*MR.CODEHACKER*]" + Font.Color.WHITE + "-->"))
                     if choice == 1:
                         ScrapeOp = "Positive"
                         choice = int(input(
-                            Font.Color.BLUE + "\n[?]" + Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Default", "choice", "None") + Font.Color.GREEN + "[#MR.HOLMES#]" + Font.Color.WHITE + "-->"))
+                            Font.Color.BLUE + "\n[?]" + Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Default", "choice", "None") + Font.Color.GREEN + "[#MR.CODEHACKER#]" + Font.Color.WHITE + "-->"))
                         if choice == 1:
                             http_proxy = Proxies.proxy.final_proxis
                             http_proxy2 = Proxies.proxy.choice3
@@ -599,7 +599,7 @@ class MrHolmes:
                     Language.Translation.Translate_Language(filename, "Username", "Default", "NoFound").format(username))
                 ScrapeOp = "Negative"
         else:
-            MrHolmes.Scraping(report,username,http_proxy,InstagramParams,PostLocations, PostGpsCoordinates,TwitterParams)
+            MrCodeHacker.Scraping(report,username,http_proxy,InstagramParams,PostLocations, PostGpsCoordinates,TwitterParams)
         if PostGpsCoordinates == [] and PostLocations == []:
             pass
         else:
@@ -623,7 +623,7 @@ class MrHolmes:
         
         count = 1
         Recaps = int(input(Font.Color.BLUE + "\n[?]" + Font.Color.WHITE + Language.Translation.Translate_Language(
-                filename, "Default", "Hypo", "None") + Font.Color.GREEN + "[#MR.HOLMES#]" + Font.Color.WHITE + "-->"))
+                filename, "Default", "Hypo", "None") + Font.Color.GREEN + "[#MR.CODEHACKER#]" + Font.Color.WHITE + "-->"))
         if Recaps == 1:
             if opt == 1:
                 Percent = found/Count*100
@@ -664,10 +664,10 @@ class MrHolmes:
             pass
         if count == 1:
             choice = int(input(
-                Font.Color.BLUE + "\n[?]" + Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Default", "Dorks", "None") + Font.Color.GREEN + "[#MR.HOLMES#]" + Font.Color.WHITE + "-->"))
+                Font.Color.BLUE + "\n[?]" + Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Default", "Dorks", "None") + Font.Color.GREEN + "[#MR.CODEHACKER#]" + Font.Color.WHITE + "-->"))
             if choice == 1:
-                MrHolmes.Google_dork(username)
-                MrHolmes.Yandex_dork(username)
+                MrCodeHacker.Google_dork(username)
+                MrCodeHacker.Yandex_dork(username)
             print(Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Default", "Report", "None") +
                   report)
             report = "GUI/Reports/Usernames/{}/{}.txt".format(username,username)
@@ -678,7 +678,7 @@ class MrHolmes:
             Notification.Notifier.Start(Mode)
             Creds.Sender.mail(report, username)
             choice = int(input(
-                Font.Color.BLUE + "\n[?]" + Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Transfer", "Question", "None") + Font.Color.GREEN + "[#MR.HOLMES#]" + Font.Color.WHITE + "-->"))
+                Font.Color.BLUE + "\n[?]" + Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Transfer", "Question", "None") + Font.Color.GREEN + "[#MR.CODEHACKER#]" + Font.Color.WHITE + "-->"))
             report = "GUI/Reports/Usernames/{}/{}.txt".format(username,username)
             if choice == 1:
                 FileTransfer.Transfer.File(report, username, ".txt")

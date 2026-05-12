@@ -1,6 +1,6 @@
 #!/bin/bash
-# Mr.CodeHacker - Linux Installer
-# Platform: Linux (Debian/Ubuntu, Fedora/RHEL, Arch)
+# Mr.CodeHacker - macOS Installer
+# Platform: macOS (requires Homebrew)
 
 BLUE='\033[0;36m'
 GREEN='\033[0;32m'
@@ -14,7 +14,7 @@ banner() {
     echo -e "${GREEN}"
     cat Banners/Banner6.txt 2>/dev/null || echo "===== MR.CODEHACKER ====="
     echo -e "${RESET}"
-    echo -e "${WHITE}  OSINT TOOL - LINUX INSTALLER${RESET}"
+    echo -e "${WHITE}  OSINT TOOL - macOS INSTALLER${RESET}"
     echo -e "${WHITE}  =============================\n${RESET}"
 }
 
@@ -22,51 +22,46 @@ print_step() { echo -e "${BLUE}[*]${WHITE} $1${RESET}"; }
 print_ok()   { echo -e "${GREEN}[+]${WHITE} $1${RESET}"; }
 print_err()  { echo -e "${RED}[!]${WHITE} $1${RESET}"; }
 
-check_root() {
-    if [ "$(id -u)" -ne 0 ]; then
-        print_err "Please run this script as root: sudo bash install.sh"
-        exit 1
+check_brew() {
+    if ! command -v brew &>/dev/null; then
+        print_step "Homebrew not found. Installing Homebrew..."
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        if ! command -v brew &>/dev/null; then
+            print_err "Homebrew installation failed. Please install it manually: https://brew.sh"
+            exit 1
+        fi
+        print_ok "Homebrew installed."
+    else
+        print_ok "Homebrew already installed."
     fi
 }
 
-detect_distro() {
-    if command -v apt-get &>/dev/null; then
-        PKG_MANAGER="apt"
-    elif command -v dnf &>/dev/null; then
-        PKG_MANAGER="dnf"
-    elif command -v yum &>/dev/null; then
-        PKG_MANAGER="yum"
-    elif command -v pacman &>/dev/null; then
-        PKG_MANAGER="pacman"
+check_python() {
+    if ! command -v python3 &>/dev/null; then
+        print_step "Installing Python 3..."
+        brew install python3
     else
-        print_err "Unsupported package manager. Install dependencies manually."
-        exit 1
+        print_ok "Python 3 already installed: $(python3 --version)"
     fi
-    print_ok "Detected package manager: $PKG_MANAGER"
 }
 
 install_packages() {
-    print_step "Installing system packages..."
+    check_brew
 
-    case "$PKG_MANAGER" in
-        apt)
-            apt-get update -y
-            apt-get install -y python3 python3-pip whois traceroute php wkhtmltopdf curl
-            ;;
-        dnf)
-            dnf update -y
-            dnf install -y python3 python3-pip whois traceroute php wkhtmltopdf curl
-            ;;
-        yum)
-            yum update -y
-            yum install -y python3 python3-pip whois traceroute php curl
-            print_err "wkhtmltopdf may need manual install on this distro."
-            ;;
-        pacman)
-            pacman -Syu --noconfirm
-            pacman -S --noconfirm python python-pip whois traceroute php wkhtmltopdf curl
-            ;;
-    esac
+    print_step "Updating Homebrew..."
+    brew update
+
+    check_python
+
+    print_step "Installing whois..."
+    brew install whois
+
+    print_step "Installing PHP (for GUI)..."
+    brew install php
+
+    print_step "Installing wkhtmltopdf (for PDF export)..."
+    brew install --cask wkhtmltopdf 2>/dev/null || brew install wkhtmltopdf 2>/dev/null || \
+        print_err "wkhtmltopdf skipped (install manually if needed for PDF features)"
 
     print_step "Upgrading pip..."
     python3 -m pip install --upgrade pip
@@ -117,10 +112,7 @@ set_display() {
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 banner
-check_root
-detect_distro
-
-echo -e "${YELLOW}This will install Mr.CodeHacker and all required packages on Linux.${RESET}"
+echo -e "${YELLOW}This will install Mr.CodeHacker and all required packages on macOS.${RESET}"
 echo -e "${BLUE}[?]${WHITE} Do you want to continue? (1) YES  (2) NO${RESET}\n"
 read -p "[#MR.CODEHACKER#]--> " confirm
 

@@ -25,10 +25,10 @@ class Downloader:
         Password = Parser["Settings"]["Password"]
         while Attempts > 0:
             Pass = str(input(
-                Font.Color.BLUE + "\n[+]" + Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Update", "Insert", "None").format(Attempts) + "\n\n" + Font.Color.GREEN + "[#MR.HOLMES#]" + Font.Color.WHITE + "-->"))
+                Font.Color.BLUE + "\n[+]" + Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Update", "Insert", "None").format(Attempts) + "\n\n" + Font.Color.GREEN + "[#MR.CODEHACKER#]" + Font.Color.WHITE + "-->"))
             while Pass == "":
                 Pass = str(input(
-                   Font.Color.BLUE + "\n[+]" + Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Update", "Insert", "None").format(Attempts) + "\n\n" + Font.Color.GREEN + "[#MR.HOLMES#]" + Font.Color.WHITE + "-->"))
+                   Font.Color.BLUE + "\n[+]" + Font.Color.WHITE + Language.Translation.Translate_Language(filename, "Update", "Insert", "None").format(Attempts) + "\n\n" + Font.Color.GREEN + "[#MR.CODEHACKER#]" + Font.Color.WHITE + "-->"))
             if Pass == Password:
                 Downloader.Update()
             else:
@@ -42,17 +42,17 @@ class Downloader:
     def Update():
         Path = Parser["Settings"]["Path"]
         os.chdir(Path)
-        if os.path.exists("Mr.Holmes_Old"):
-            shutil.rmtree("Mr.Holmes_Old",)
+        if os.path.exists("Mr.CodeHacker_Old"):
+            shutil.rmtree("Mr.CodeHacker_Old",)
         if os.name == "nt":
-            os.system("rename Mr.Holmes Mr.Holmes_Old 2>NUL >NUL")
+            os.system("rename Mr.CodeHacker Mr.CodeHacker_Old 2>NUL >NUL")
         else:
-            os.system("mv Mr.Holmes Mr.Holmes_Old &>/dev/null")
-        os.system("git clone https://github.com/Lucksi/Mr.Holmes")
+            os.system("mv Mr.CodeHacker Mr.CodeHacker_Old &>/dev/null")
+        os.system("git clone https://github.com/Lucksi/Mr.CodeHacker")
         choice = int(input(Font.Color.BLUE + "\n[+]" + Font.Color.WHITE +
                      Language.Translation.Translate_Language(filename, "Update", "Choice", "None")))
         if choice == 1:
-            os.remove("Mr.Holmes_Old")
+            os.remove("Mr.CodeHacker_Old")
             print(Font.Color.WHITE + Language.Translation.Translate_Language(filename,
                   "Update", "Delete", "None"))
         else:

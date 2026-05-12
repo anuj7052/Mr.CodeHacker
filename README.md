@@ -2,152 +2,177 @@
   <img width="650px" height="100px" src="Icon/Banner.png">
 </p>
 
-<p align = "center">
-  <img src = "https://img.shields.io/github/stars/Lucksi/Mr.Holmes">
-  <img src = "https://img.shields.io/github/forks/Lucksi/Mr.Holmes">
-  <img src = "https://img.shields.io/badge/Maintained%3F-yes-green.svg">
-  <img src = "https://img.shields.io/github/license/Lucksi/Mr.Holmes">
-  <img src = "https://img.shields.io/github/repo-size/Lucksi/Mr.Holmes">
-  <img src= "https://img.shields.io/github/languages/count/Lucksi/Mr.Holmes">
-  <img src = "https://visitor-badge.laobi.icu/badge?page_id=Lucksi.Mr.Holmes">
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows%20%7C%20Termux-blue">
+  <img src="https://img.shields.io/badge/Python-3.x-green">
+  <img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg">
+  <img src="https://img.shields.io/badge/License-GPL%20v3-blue">
+  <img src="https://img.shields.io/badge/Version-T.G.D--1.0.4-orange">
 </p>
 
-# :mag: Mr.Holmes 
+---
 
-**Mr.Holmes is a information gathering tool (OSINT). The main purpose is to gain information about domains,username and phone numbers with the help of public source avaiable on the internet also it use the google dorks attack for specific researchers. It also use proxies for make your requests completley anonymous and a WhoIS Api for getting more information about a domain.**
-<br>
+# :mag: Mr.CodeHacker
 
-# :heavy_exclamation_mark: DISCLAIMER
-**This Tool is Not 100% Accurate so it can fail somtimes. Also this tool is made for educational and research purposes only, i do not assume any kind of responsibility for any imprope use of this tool.**
-<br>
+**Mr.CodeHacker is a complete information gathering tool (OSINT). It can gather information about domains, usernames, phone numbers, and email addresses using publicly available internet sources. It supports Google Dorks, proxy-based anonymous requests, WhoIS API lookups, interactive maps, graphs, PDF export, and file transfer via QR code.**
 
-#  SCREENSHOT
+> **DISCLAIMER:** This tool is made for **educational and research purposes only**. Results may not be 100% accurate. The author does not take any responsibility for improper use.
+
+---
+
+## :camera: SCREENSHOTS
+
 ![Screenshot](Screenshot/Screenshot.png)
 
-<br>
-
-<p align = "center">
-<img src = "Screenshot/Termux.png" height = "400px" width = "300px">
+<p align="center">
+  <img src="Screenshot/Termux.png" height="400px" width="300px">
 </p>
 
-<br>
+---
 
-# :heavy_check_mark: INSTALLATION LINUX/MAC:
+## :package: REQUIREMENTS
+
+- Python 3.x
+- pip
+- PHP (for GUI)
+- whois
+- traceroute / tracepath
+- wkhtmltopdf (for PDF export)
+
+Python libraries (auto-installed):
+```
+PyQRCode
+phonenumbers
+requests
+pdfkit
+beautifulsoup4
+stem
+```
+
+---
+
+## :heavy_check_mark: INSTALLATION — TERMUX (Android)
+
 ```bash
-git clone https://github.com/Lucksi/Mr.Holmes
-cd Mr.Holmes
-sudo apt-get update
-sudo chmod +x install.sh
+pkg update && pkg upgrade
+pkg install python python-pip git
+git clone https://github.com/anuj7052/Mr.CodeHacker
+cd Mr.CodeHacker
+chmod +x install_Termux.sh
+bash install_Termux.sh
+```
+
+> No `proot` or root required.
+
+---
+
+## :heavy_check_mark: INSTALLATION — macOS
+
+```bash
+git clone https://github.com/anuj7052/Mr.CodeHacker
+cd Mr.CodeHacker
+chmod +x install_mac.sh
+bash install_mac.sh
+```
+
+> Homebrew will be installed automatically if not found.
+
+---
+
+## :heavy_check_mark: INSTALLATION — LINUX (Debian / Ubuntu / Fedora / Arch)
+
+```bash
+git clone https://github.com/anuj7052/Mr.CodeHacker
+cd Mr.CodeHacker
+chmod +x install.sh
 sudo bash install.sh
 ```
-<br>
 
-# :heavy_check_mark: INSTALLATION LINUX/MAC (Venv Enviroment):
-**if you encounter some errors in the python libraries installation use this method**
+> The installer auto-detects your package manager (`apt` / `dnf` / `yum` / `pacman`).
+
+### Linux (Virtual Environment — if pip errors occur):
+
 ```bash
-git clone https://github.com/Lucksi/Mr.Holmes
-sudo apt-get update
-cd Mr.Holmes
+git clone https://github.com/anuj7052/Mr.CodeHacker
+cd Mr.CodeHacker
 python3 -m venv .lib_venv
-sudo chmod +x install.sh
-sudo bash install.sh
 source .lib_venv/bin/activate
 pip3 install -r requirements.txt
-python3 MrHolmes.py
+python3 MrCodeHacker.py
 ```
-<br>
 
-# :heavy_check_mark: INSTALLATION WINDOWS (1°WAY)
-**If you have git installed on your windows machine you can do the following commands:**
+---
+
+## :heavy_check_mark: INSTALLATION — WINDOWS (10 / 11)
+
+**Option 1 — via Git:**
 ```cmd
-git clone https://github.com/Lucksi/Mr.Holmes
-cd Mr.Holmes
+git clone https://github.com/anuj7052/Mr.CodeHacker
+cd Mr.CodeHacker
 Install.cmd
 ```
-<br>
 
-# :heavy_check_mark: INSTALLATION WINDOWS (2° WAY):
-**If you download the zip file of Mr.Holmes you should first unzip it and after that do the following commands:**
+**Option 2 — via ZIP download:**
 ```cmd
-ren Mr.Holmes-master Mr.Holmes
-cd Mr.Holmes
+ren Mr.CodeHacker-master Mr.CodeHacker
+cd Mr.CodeHacker
 Install.cmd
 ```
-<br>
 
-# :heavy_check_mark: INSTALLATION TERMUX:
+> Run `Install.cmd` as **Administrator**. winget installs Python 3 and XAMPP (PHP) automatically.  
+> If winget is not available, install **App Installer** from the Microsoft Store.
+
+---
+
+## :arrow_forward: USAGE
+
+### Linux / macOS:
 ```bash
-pkg install proot
-git clone https://github.com/Lucksi/Mr.Holmes
-cd Mr.Holmes
-proot -0 chmod +x install_Termux.sh
-./install_Termux.sh
+cd Mr.CodeHacker
+python3 MrCodeHacker.py
 ```
-<br>
-
-#  USAGE LINUX/MAC:
-    cd Mr.Holmes
-    sudo python3 MrHolmes.py
-    OR:
-    cd Mr.Holmes
-    cd Launchers
-    Execute Launcher.sh
-
-<br>
-    
-#  USAGE LINUX/MAC(Venv Enviroment):
-    cd Mr.Holmes
-    source .lib_venv/bin/activate
-    python3 MrHolmes.py
-
-<br>
-
-#  USAGE TERMUX/WINDOWS:
-    python3 MrHolmes.py
-<br>
-
-#  USAGE WINDOWS:
-    python MrHolmes.py
-    OR
-    cd Launchers
-    Execute Win_Launcher.exe
-
-<br>
-
-# API KEY LINK:
-    https://whois.whoisxmlapi.com
-<br>
-
-# SETTINGS FOLDER:
-
-    Configuration/Configuration.ini
-<br>
-
-# :heavy_exclamation_mark: ATTENTION
-**DATABASE NOT AVAIABLE ON TERMUX**
-<br>
-
-# :heavy_exclamation_mark: ATTENTION ON WINDOWS
-**IF PYTHON AND PHP WONT INSTALL YOU HAVE TO DOWNLOAD THEM MANUALLY:**
-    
-<br>
-
-# VERSIONS LIST:
-    https://lucksi.github.io/Mr.Holmes/Pages/versions.html
-<br>
-
-# :heavy_check_mark: GUI DARK/LIGHT MODE:
+Or via launcher:
 ```bash
-cd GUI
-cd Theme
-edit Mode.json
-write:Light=(Light-Mode)
-write:Dark=(Dark-Mode) 
-write:High-Contrast(High-Contrast-Mode)
+cd Launchers
+bash Launcher.sh
 ```
-<br>
 
-# :heavy_check_mark: Mode.json CODE EXAMPLE:
+### Linux / macOS (Virtual Environment):
+```bash
+cd Mr.CodeHacker
+source .lib_venv/bin/activate
+python3 MrCodeHacker.py
+```
+
+### Termux:
+```bash
+cd Mr.CodeHacker
+python MrCodeHacker.py
+```
+
+### Windows:
+```cmd
+python MrCodeHacker.py
+```
+Or run `Launchers\Win_Launcher.exe`
+
+---
+
+## :gear: CONFIGURATION
+
+Settings file location:
+```
+Configuration/Configuration.ini
+```
+
+Default update password: `Holmes`  
+Default GUI credentials — Username: `Admin` / Password: `Qwerty123`
+
+---
+
+## :earth_americas: GUI — DARK / LIGHT MODE
+
+Edit `GUI/Theme/Mode.json`:
 ```json
 {
     "Color": {
@@ -155,34 +180,25 @@ write:High-Contrast(High-Contrast-Mode)
     }
 }
 ```
-<br>
+Available values: `Light`, `Dark`, `High-Contrast`
 
-# :heavy_check_mark: GUI/USERNAME/PASSWORD:
-```bash
-cd GUI
-cd Credentials
-edit Login.json
-write:Status=Active/Deactive
-edit Users.json
-write:Username=Your Username
-write:Password=Your Password
-```
-<br>
+---
 
-# :heavy_check_mark: Login.json CODE EXAMPLE:
-```json    
+## :closed_lock_with_key: GUI — LOGIN / CREDENTIALS
+
+**`GUI/Credentials/Login.json`:**
+```json
 {
     "Database": {
         "Status": "Active"
     }
 }
 ```
-<br>
 
-# :heavy_check_mark: Users.json CODE EXAMPLE
+**`GUI/Credentials/Users.json`:**
 ```json
 {
-    "Users":[
+    "Users": [
         {
             "Username": "Your Username",
             "Password": "Your Password"
@@ -190,17 +206,12 @@ write:Password=Your Password
     ]
 }
 ```
-<br>
 
-# :heavy_check_mark: LANGUAGE SETTINGS:
-```bash
-cd GUI
-cd Language
-edit Language.json
-```
-<br>
+---
 
-# :heavy_check_mark: Language.json CODE EXAMPLE:
+## :globe_with_meridians: GUI — LANGUAGE SETTINGS
+
+Edit `GUI/Language/Language.json`:
 ```json
 {
     "Language": {
@@ -208,172 +219,125 @@ edit Language.json
     }
 }
 ```
-<br>
+Available values: `English`, `Italian`, `French`, `Browser`
 
-# DEFAULT USERNAME AND PASSWORD:
-    Username:Admin
-    Password:Qwerty123
+---
 
-<br>
+## :speech_balloon: CLI LANGUAGES
 
-# AVAIABLE LANGUAGES:
-    Italiano 🇮🇹 
-    English 🏴󠁧󠁢󠁥󠁮󠁧󠁿
-    Français 🇫🇷
+| Language | Flag |
+|----------|------|
+| English  | 🏴󠁧󠁢󠁥󠁮󠁧󠁿 |
+| Italiano | 🇮🇹 |
+| Français | 🇫🇷 |
 
-<br>
+---
 
-# ACTUAL VERSION:
-## T.G.D-1.0.4
+## :link: API KEY
 
-<br>
+WhoIS XML API (optional, for extended domain lookups):  
+[https://whois.whoisxmlapi.com](https://whois.whoisxmlapi.com)
 
-# INTERACTIVE MAP HAS BEEN MADE WITH:
-**Leaflet: https://leafletjs.com**
+---
 
-<br>
+## :sparkles: FEATURES
 
-# USERNAME ENTITIES:
-**The Icons on Folder: /GUI/Icon/Entities/Site_Icon have been taken from: https://www.iconfinder.com/ all credit goes to their respective creators**
+### Username Lookup
+Search for a username across hundreds of social media platforms.
 
-<br>
+### Phone Lookup
+Gather information about a phone number including carrier, location, and linked accounts.
 
-# ENCODING:
-**With this version it is Possible to Encode your reports**
+### Website / Domain Lookup
+Whois, DNS, headers, open ports, traceroute, and more.
 
-<br>
+### Person Search
+Search for information about a person by name.
 
-# DECODING:
-**With this version it is Possible to Decode your reports**
+### Email Lookup
+Check if an email address is linked to specific social networks or services — without alerting the target.
 
-<br>
+### Google Dorks
+Search for videos, sounds, and images via Dorks. Supports date filtering and date ranges.
 
-# HYPOTHESIS
-**This new version Permits to generate some "Hypothesis" on the subject in base of their numbers on varios social media including possible hobbies/interests (It may not be a 100% attendible)**
+![Screenshot](Screenshot/Dorks.png)
+![Screenshot](Screenshot/Dorks2.png)
 
-<br>
+### Port Scanner
+Scan open ports on a target host.
 
-# EMAIL-LOOKUP:
-**With this new version is possible to check if an email is connected to some specific socials/services without letting the target know it.**
-
-<br>
-
-# GRAPHS:
-**With this new version has been added the possibility to create Graphs in order to create a schema for information scheduling.**
-
-<br>
-
-# EXAMPLE:
+### Graphs
+Generate relationship graphs for information scheduling.
 
 ![Screenshot](Screenshot/Graph_Test.png)
 
-<br>
-
-# MAPS:
-**With this new version has been added the possibility to create Interactive Maps.**
-
-<br>
-
-# EXAMPLE:
+### Interactive Maps
+Plot gathered location data on an interactive Leaflet map.
 
 ![Screenshot](Screenshot/Map_Test.png)
 
-<br>
+> Powered by [Leaflet.js](https://leafletjs.com)
 
-# DORKS:
-**With this new version it is possible to search Video/Sound/Images via Dorks (1) and to effectuate specific research adding date ex '1998/01/1' or date range ex '1998/01/01-2020/12/31' (2).**
+### PDF Export
+Convert reports and graphs to PDF.
 
-<br>
-
-# EXAMPLE (1):
-
-![Screenshot](Screenshot/Dorks.png)
-
-<br>
-
-# EXAMPLE (2):
-
-![Screenshot](Screenshot/Dorks2.png)
-
-<br>
-
-# PDF:
-**With this new version has been added the possibility to converte your Graphs in PDF.**
-
-<br>
-
-# EXAMPLE:
-<p align = "center">
-<img src="Screenshot/Dark_Pdf.png" height ="400px" width = "400px" border = "5px" style="border-color:white;">
+<p align="center">
+  <img src="Screenshot/Dark_Pdf.png" height="400px" width="400px">
 </p>
 
-<br>
+Available PDF themes: `Light 🌕`, `Dark 🌗`, `High-Contrast 🌑`
 
-# AVAILBLE PDF-THEMES:
-    Light 🌕
-    Dark 🌗
-    High-Contrast 🌗
+### File Transfer via QR Code
+Transfer reports directly to your phone using a QR code.
 
-<br>
-
-# FILE-TRANSFER:
-**With this version it is Possible to Transfer your reports directly to Your Phone Via Qr-Code**
-
-<br>
-
-# FILE-TRANSFER PAGE:
-<p align = "center">
-<img src="Screenshot/File-Transfer.jpg" height ="500px" width = "300px" border = "5px" style="border-color:white;">
+<p align="center">
+  <img src="Screenshot/File-Transfer.jpg" height="500px" width="300px">
 </p>
 
-<br>
+### Encoding / Decoding
+Encode and decode your reports.
 
-# :last_quarter_moon: DARK MODE:
+### Hypothesis Generation
+Generates hypotheses about a target based on their social media presence (may not be 100% accurate).
+
+---
+
+## :last_quarter_moon: DARK MODE
+
 ![Screenshot](Screenshot/Dark_Mode.png)
 
-<br>
-
-<p align = "center">
-<img src="Screenshot/Dark.jpg" height ="500px" width = "300px" border = "5px" style="border-color:white;">
+<p align="center">
+  <img src="Screenshot/Dark.jpg" height="500px" width="300px">
 </p>
 
-<br>
+---
 
-# :full_moon: LIGHT MODE:
+## :full_moon: LIGHT MODE
+
 ![Screenshot](Screenshot/Light_Mode.png)
 
-<br>
-
-<p align = "center">
-<img src="Screenshot/Light.jpg" height ="500px" width = "300px" border = "5px" style="border-color:gray;">
+<p align="center">
+  <img src="Screenshot/Light.jpg" height="500px" width="300px">
 </p>
 
+---
 
-<br>
+## :warning: NOTES
 
-# :last_quarter_moon: HIGH-CONTRAST MODE:
-![Screenshot](Screenshot/High-Contrast_Mode.png)
+- **DATABASE is NOT available on Termux.**
+- On Windows, if Python or PHP do not install automatically via winget, download them manually:
+  - Python: [https://python.org](https://python.org)
+  - PHP/XAMPP: [https://www.apachefriends.org](https://www.apachefriends.org)
 
-<br>
+---
 
-<p align = "center">
-<img src="Screenshot/High-Contrast.jpg" height ="490px" width = "300px" border = "5px" style="border-color:white;">
-</p>
+## :label: VERSION
 
-<hr>
-<br>
+**T.G.D-1.0.4**
 
+---
 
-## <p align = center> STARGAZERS OVER TIME 
+## :copyright: CREDITS
 
-
-[![Stargazers over time](https://starchart.cc/Lucksi/Mr.Holmes.svg)](https://starchart.cc/Lucksi/Mr.Holmes)
-
-<br>
-
-## <p align= center>MADE WITH :heart: BY LUCKSI IN :it:</p>
-
-## <p align = center>  ORIGINAL CREATOR: <a href = "https://github.com/Lucksi">LUCA GAROFALO (Lucksi)</a></p>
-
-
-## <p align = center>LICENSE: GPL-3.0 License <br>COPYRIGHT: (C) 2021-2026 Lucksi
+- Username icons in `GUI/Icon/Entities/Site_Icon` sourced from [iconfinder.com](https://www.iconfinder.com/) — all credit to their respective creators.
+- Interactive maps powered by [Leaflet.js](https://leafletjs.com).

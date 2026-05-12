@@ -3,18 +3,18 @@
 </p>
 
 <p align = "center">
-  <img src = "https://img.shields.io/github/stars/Lucksi/Mr.Holmes">
-  <img src = "https://img.shields.io/github/forks/Lucksi/Mr.Holmes">
+  <img src = "https://img.shields.io/github/stars/Lucksi/Mr.CodeHacker">
+  <img src = "https://img.shields.io/github/forks/Lucksi/Mr.CodeHacker">
   <img src = "https://img.shields.io/badge/Maintained%3F-yes-green.svg">
-  <img src = "https://img.shields.io/github/license/Lucksi/Mr.Holmes">
-  <img src = "https://img.shields.io/github/repo-size/Lucksi/Mr.Holmes">
-  <img src= "https://img.shields.io/github/languages/count/Lucksi/Mr.Holmes">
-  <img src = "https://visitor-badge.laobi.icu/badge?page_id=Lucksi.Mr.Holmes">
+  <img src = "https://img.shields.io/github/license/Lucksi/Mr.CodeHacker">
+  <img src = "https://img.shields.io/github/repo-size/Lucksi/Mr.CodeHacker">
+  <img src= "https://img.shields.io/github/languages/count/Lucksi/Mr.CodeHacker">
+  <img src = "https://visitor-badge.laobi.icu/badge?page_id=Lucksi.Mr.CodeHacker">
 </p>
 
-# :mag: Mr.Holmes 
+# :mag: Mr.CodeHacker 
 
-**Mr.Holmes est un outil de collecte d'informations (OSINT). Dont le but principal est d'obtenir des informations sur les domaines, les noms d'utilisateur, les e-mails et les numéros de téléphone à l'aide de ressources publiques disponibles sur le net, en utilisant également des techniques telles que Google / Yandex dorks pour des recherches encore plus spécifiques.certains proxies pour faire vos demandes anonyme et utilisez une API WhoIs pour obtenir plus d'informations sur un domaine.**
+**Mr.CodeHacker est un outil de collecte d'informations (OSINT). Dont le but principal est d'obtenir des informations sur les domaines, les noms d'utilisateur, les e-mails et les numéros de téléphone à l'aide de ressources publiques disponibles sur le net, en utilisant également des techniques telles que Google / Yandex dorks pour des recherches encore plus spécifiques.certains proxies pour faire vos demandes anonyme et utilisez une API WhoIs pour obtenir plus d'informations sur un domaine.**
 <br>
 
 # :heavy_exclamation_mark: DISCLAIMER
@@ -34,8 +34,8 @@
 
 # :heavy_check_mark: INSTALLATION LINUX/MAC:
 ```bash
-git clone https://github.com/Lucksi/Mr.Holmes
-cd Mr.Holmes
+git clone https://github.com/Lucksi/Mr.CodeHacker
+cd Mr.CodeHacker
 sudo apt-get update
 sudo chmod +x install.sh
 sudo bash install.sh
@@ -45,17 +45,17 @@ sudo bash install.sh
 # :heavy_check_mark: INSTALLATION WINDOWS(1°WAY):
 **Si git est installé sur votre ordinateur Windows, vous pouvez exécuter les commandes suivantes:**
 ```cmd
-git clone https://github.com/Lucksi/Mr.Holmes
-cd Mr.Holmes
+git clone https://github.com/Lucksi/Mr.CodeHacker
+cd Mr.CodeHacker
 Install.cmd
 ```
 <br>
 
 # :heavy_check_mark: INSTALLATION WINDOWS(2°WAY):
-**Si vous téléchargez le fichier zip de Mr.Holmes, vous devez d'abord le décompresser, puis exécuter les commandes suivantes:**
+**Si vous téléchargez le fichier zip de Mr.CodeHacker, vous devez d'abord le décompresser, puis exécuter les commandes suivantes:**
 ```cmd
-ren Mr.Holmes-master Mr.Holmes
-cd Mr.Holmes
+ren Mr.CodeHacker-master Mr.CodeHacker
+cd Mr.CodeHacker
 Install.cmd
 ```
 <br>
@@ -63,15 +63,15 @@ Install.cmd
 # :heavy_check_mark: INSTALLATION TERMUX:
 ```bash
 pkg install proot
-git clone https://github.com/Lucksi/Mr.Holmes
-cd Mr.Holmes
+git clone https://github.com/Lucksi/Mr.CodeHacker
+cd Mr.CodeHacker
 proot -0 chmod +x install_Termux.sh
 ./install_Termux.sh
 ```
 <br>
 
 #  UTILIZATION LINUX/MAC:
-    sudo python3 MrHolmes.py
+    sudo python3 MrCodeHacker.py
     OR:
     cd Launchers
     Execute Launcher.sh
@@ -80,12 +80,12 @@ proot -0 chmod +x install_Termux.sh
 
 
 #  UTILIZATION TERMUX:
-    python3 MrHolmes.py
+    python3 MrCodeHacker.py
 
 <br>
 
 #  UTILIZATION WINDOWS:
-    python MrHolmes.py
+    python MrCodeHacker.py
     OR:
     cd Launchers
     Execute Win_Launcher.exe
@@ -111,7 +111,7 @@ proot -0 chmod +x install_Termux.sh
 <br>
 
 # LISTE DES VERSIONS:
-    https://lucksi.github.io/Mr.Holmes/Pages/versions.html
+    https://lucksi.github.io/Mr.CodeHacker/Pages/versions.html
 <br>
 
 # :heavy_check_mark: GUI DARK/LIGHT MODE:
@@ -342,7 +342,7 @@ edit Language.json
 ## <p align = center> STARGAZERS OVER TIME 
 
 
-[![Stargazers over time](https://starchart.cc/Lucksi/Mr.Holmes.svg)](https://starchart.cc/Lucksi/Mr.Holmes)
+[![Stargazers over time](https://starchart.cc/Lucksi/Mr.CodeHacker.svg)](https://starchart.cc/Lucksi/Mr.CodeHacker)
 
 <br>
 

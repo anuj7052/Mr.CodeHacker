@@ -33,13 +33,13 @@ int Core(){
     int option = 0;
     while (option != 3){
 		banner();
-	    cout<<green<<"\n\n[+]"<<white<<"WOULD YOU LIKE TO:\n(1)EXECUTE MR.HOLMES\n(2)ACTIVATE DATABASE(LOCALHOST ONLY)\n(3)EXIT\n\n"<<green<<"[#MR.HOLMES#]"<<white<<"-->";
+	    cout<<green<<"\n\n[+]"<<white<<"WOULD YOU LIKE TO:\n(1)EXECUTE MR.CODEHACKER\n(2)ACTIVATE DATABASE(LOCALHOST ONLY)\n(3)EXIT\n\n"<<green<<"[#MR.CODEHACKER#]"<<white<<"-->";
 	    cin>>option;
 	    if(option == 1){
-			cout<<green<<"\n[+]"<<white<<"EXECUTING MR.HOLMES";
+			cout<<green<<"\n[+]"<<white<<"EXECUTING MR.CODEHACKER";
 			Sleep(2);
 			chdir("..");
-	        system("python MrHolmes.py");
+	        system("python MrCodeHacker.py");
 	        chdir("Launchers");
 	    }
 	    else if(option == 2){

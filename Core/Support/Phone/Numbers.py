@@ -4,7 +4,7 @@
 # License: GNU General Public License v3.0
 
 import phonenumbers
-import MrHolmes as holmes
+import MrCodeHacker as holmes
 import json
 import urllib
 from phonenumbers import carrier
