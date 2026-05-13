@@ -23,13 +23,15 @@ class Phony:
 
     @staticmethod
     def Get_GeoLocation(zone, param1, param2, jsonfile, num, Type):
-        req = "https://nominatim.openstreetmap.org/search.php?q={}&format=json".format(
-            zone)
+        req = urllib.request.Request(
+            "https://nominatim.openstreetmap.org/search.php?q={}&format=json".format(zone),
+            headers={"User-Agent": "MrCodeHacker-OSINT/1.0 (github.com/anuj7052/Mr.CodeHacker)"}
+        )
         print(Font.Color.GREEN + "\n[+]" + Font.Color.WHITE +
               Language.Translation.Translate_Language(filename, "Phone", "Geo", "None").format(num))
         sleep(2)
-        url = urllib.request.urlopen(req)
         try:
+            url = urllib.request.urlopen(req)
             Reader = url.read()
             parser = json.loads(Reader)
             Lat = parser[0]["lat"]

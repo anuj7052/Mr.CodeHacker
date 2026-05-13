@@ -247,8 +247,10 @@ class Downloader:
                                     "/{}.json".format(arr_name[j-1])
                                 final_loc = location.strip()
                                 format_loc = final_loc.replace(" ", "+")
-                                req = "https://nominatim.openstreetmap.org/search.php?q={}&format=json".format(
-                                    format_loc)
+                                req = urllib.request.Request(
+                                    "https://nominatim.openstreetmap.org/search.php?q={}&format=json".format(format_loc),
+                                    headers={"User-Agent": "MrCodeHacker-OSINT/1.0 (github.com/anuj7052/Mr.CodeHacker)"}
+                                )
                                 print(Font.Color.GREEN + "\n[+]" + Font.Color.WHITE +
                                       Language.Translation.Translate_Language(LangFile, "Username", "Instagram", "GeoData").format(str(j)))
                                 sleep(2)

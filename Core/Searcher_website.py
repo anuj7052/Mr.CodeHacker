@@ -564,8 +564,11 @@ class Web:
                 f.write(telephone + "\r\n")
                 f.close()
                 try:
-                    link_json = "https://nominatim.openstreetmap.org/search?q={}+{}&format=json".format(
-                        street2, city2).replace(" ", "%20")
+                    link_json = urllib.request.Request(
+                        "https://nominatim.openstreetmap.org/search?q={}+{}&format=json".format(
+                            street2, city2).replace(" ", "%20"),
+                        headers={"User-Agent": "MrCodeHacker-OSINT/1.0 (github.com/anuj7052/Mr.CodeHacker)"}
+                    )
                     get_Coords = urllib.request.urlopen(link_json)
                     Reader = get_Coords.read()
                     parser = json.loads(Reader)
